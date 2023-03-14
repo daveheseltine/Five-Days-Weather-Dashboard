@@ -63,8 +63,8 @@ The styling in the image is just an example, so feel free to add your own.<a hre
 ___
 # Deployment
 ## URL
-* The URL of the deployed application: https://daveheseltine.github.io/five-days/
-* The URL of the GitHub Repository: https://github.com/daveheseltine/five-days
+* The URL of the deployed application: https://daveheseltine.github.io/Five-Days-Weather-Dashboard/
+* The URL of the GitHub Repository: https://github.com/daveheseltine/Five-Days-Weather-Dashboard
 
 </br>
 
