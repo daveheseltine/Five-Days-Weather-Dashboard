@@ -123,3 +123,24 @@ $(document).ready(function () {
       history = ["London", "Berlin", "Paris", "Edinburgh", "Madrid", "Birmingham"]
     }
   }
+
+
+  // Initialise webpage:
+  historyUpload();
+  historyButtons();
+  getWeather(history[0]);
+
+
+  // Buttons:
+  $("#search-button").on("click", function(event) {
+    event.preventDefault();
+    getWeather($("#search-input").val().trim());
+  });
+
+  $(document).on("click", ".history-button", function(event) {
+    event.preventDefault();
+    getWeather($(this).text());
+  });
+
+
+});
