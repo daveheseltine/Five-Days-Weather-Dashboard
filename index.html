@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Five Days Weather Dashboard</title>
+  <!-- Stylesheets -->
+  <!-- Bootstrap, Font-Awesome, style.css(local) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+
+<body class="bg-color-background">
+  <!-- Header: -->
+  <header class="container-fluid text-center color-primary bg-color-gradient-secondary p-4">
+    <h1>Five Days Weather Dashboard</h1>
+  </header>
+
+  <div class="wrapper px-3 pt-4">
+    <div class="row m-0 d-flex justify-content-center">
+
+      <!-- Navigation: -->
+      <div class="col-3">
+        <h2 class="h3">
+          Search for a City:
+        </h2>
+
+        <form id="search-form" class="form pb-3">
+          <div class="form-inline form-group">
+            <div class="input-group col-12 px-0">
+              <input class="col-9 py-2 form-input" type="text" id="search-input" aria-labelledby="form-heading"/>
+              <div class="col-3 p-0 input-group-append">
+                <button type="submit" class="col-12 p-0 btn btn-primary search-button" id="search-button" aria-label="submit search">
+                  <i class="fa fa-solid fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="list-group" id="history"></div>
+      </div>
+
+      <div class="col-9">
+
+        <!-- Top - Today: -->
+        <section id="today" class="row m-0 d-flex">
+          <!-- CONTENT -->
+        </section>
+        
+        <!-- Bottom - Forecast: -->
+        <section>
+          <h2 class="col-12 pb-3">5-Day Forecast:</h1>
+          <div id="forecast" class="row m-0 d-flex justify-content-around">
+            <!-- CONTENT -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <!-- jQuery, Popper.js, Bootstrap JS, Moment.js, AJAX, script.js(local): -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
