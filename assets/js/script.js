@@ -42,7 +42,7 @@ $(document).ready(function () {
           </div>
 
           <div class="col-lg-3 col-4 p-0">
-            <img src="http://openweathermap.org/img/wn/` + response.list[0].weather[0].icon + `@2x.png" class="weather-icon"></img>
+            <img src="https://openweathermap.org/img/wn/` + response.list[0].weather[0].icon + `@2x.png" class="weather-icon"></img>
           </div>
           `);
 
@@ -68,7 +68,7 @@ $(document).ready(function () {
             <div class="card col-xl-2 col-12 bg-color-gray my-1 p-0">
               <div class="card-body d-flex flex-wrap p-0">
                 <div class="col-xl-12 col-6 d-flex justify-content-center">
-                  <img src="http://openweathermap.org/img/wn/` + response.list[k].weather[0].icon + `@2x.png" class="weather-icon"></img>
+                  <img src="https://openweathermap.org/img/wn/` + response.list[k].weather[0].icon + `@2x.png" class="weather-icon"></img>
                 </div>
 
                 <div class="forecast col-xl-12 col-6 py-3">
