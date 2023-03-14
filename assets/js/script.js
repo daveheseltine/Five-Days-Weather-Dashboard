@@ -20,7 +20,7 @@ $(document).ready(function () {
   function getWeather(input) {
     searchInput = input;
     $.ajax({
-      url: "http://api.openweathermap.org/geo/1.0/direct?q=" + searchInput + "&appid=" + APIKey,
+      url: "https://api.openweathermap.org/geo/1.0/direct?q=" + searchInput + "&appid=" + APIKey,
       method: "GET"
     }).then(function(response) {
       lat = response[0].lat;
