@@ -13,6 +13,7 @@ $(document).ready(function () {
   var city;
   var lat;
   var lon;
+  var history;
 
 
   // Named Functions:
@@ -83,3 +84,42 @@ $(document).ready(function () {
 
           $("#forecast").append(forecastCard);
         }
+
+        // Update the history array, search bar and buttons:
+        var i = $.inArray(city, history);
+        if (i !== -1) {
+          history.splice(i, 1);
+        }
+        history.unshift(city);
+        history = history.slice(0, 6);
+        $("#search-input").attr("placeholder", city);
+        $("#search-input").val("");
+        historyButtons();
+        
+        // Download the history array to local storage:
+        var historyDownload = JSON.stringify(history);
+        localStorage.setItem("history", historyDownload);
+      })
+    })
+  }
+
+  function historyButtons() {
+    $("#history").empty();
+    for (var i = 0; i < 6; i++) {
+      var historyButton = $(`
+        <button class="history-button btn btn-gray my-1">` +
+          history[i] + 
+        `</button>
+      `);
+      $("#history").append(historyButton);
+    }
+  }
+
+  // Detect local history:
+  function historyUpload() {
+    if (localStorage.getItem("history") !== null) {
+      history = JSON.parse(localStorage.getItem("history"));
+    } else {
+      history = ["London", "Berlin", "Paris", "Edinburgh", "Madrid", "Birmingham"]
+    }
+  }
